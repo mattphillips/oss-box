@@ -3,7 +3,10 @@
   "version": "0.0.1",
   "description": "open source project boilerplate generator",
   "main": "src/index.js",
-  "scripts": {},
+  "scripts": {
+    "precommit": "lint-staged",
+    "prettier": "prettier 'src/**/*.js' --write --single-quote=true --print-width=120"
+  },
   "keywords": [
     "oss",
     "open",
@@ -13,5 +16,16 @@
     "boilerplate"
   ],
   "author": "Matt Phillips <matt@mattphillips.io> (mattphillips.io)",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^4.2.3",
+    "prettier": "^1.7.4"
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn prettier",
+      "git add"
+    ]
+  }
 }
