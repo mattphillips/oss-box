@@ -1,0 +1,17 @@
+{
+  "name": "oss-box",
+  "version": "0.0.1",
+  "description": "open source project boilerplate generator",
+  "main": "src/index.js",
+  "scripts": {},
+  "keywords": [
+    "oss",
+    "open",
+    "source",
+    "project",
+    "generator",
+    "boilerplate"
+  ],
+  "author": "Matt Phillips <matt@mattphillips.io> (mattphillips.io)",
+  "license": "MIT"
+}
