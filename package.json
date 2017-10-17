@@ -39,5 +39,8 @@
       "yarn prettier",
       "git add"
     ]
+  },
+  "dependencies": {
+    "inquirer": "^3.3.0"
   }
 }
