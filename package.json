@@ -19,6 +19,14 @@
   ],
   "author": "Matt Phillips <matt@mattphillips.io> (mattphillips.io)",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattphillips/oss-box.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mattphillips/oss-box/issues"
+  },
+  "homepage": "https://github.com/mattphillips/oss-box#readme",
   "devDependencies": {
     "eslint": "^4.9.0",
     "eslint-plugin-import": "^2.7.0",
