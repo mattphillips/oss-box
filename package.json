@@ -7,7 +7,8 @@
     "lint": "eslint src",
     "lint:fix": "yarn lint -- --fix",
     "precommit": "lint-staged",
-    "prettier": "prettier 'src/**/*.js' --write --single-quote=true --print-width=120"
+    "prettier": "prettier 'src/**/*.js' --write --single-quote=true --print-width=120",
+    "start": "node src"
   },
   "keywords": [
     "oss",
