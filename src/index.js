@@ -1,5 +1,7 @@
 const inquirer = require('inquirer');
 
+const generator = require('./generator');
+
 const nonEmpty = input => input !== '';
 
 const questions = [
@@ -30,6 +32,4 @@ const questions = [
   }
 ];
 
-inquirer.prompt(questions).then(config => {
-  console.log(config);
-});
+inquirer.prompt(questions).then(generator);
