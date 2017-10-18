@@ -38,7 +38,8 @@ const questions = [
     type: 'input',
     name: 'year',
     message: 'License start year?',
-    validate: nonEmpty
+    validate: nonEmpty,
+    default: new Date().getFullYear()
   }
 ];
 
