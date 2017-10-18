@@ -2,6 +2,8 @@ const Task = require('data.task');
 
 const compose = (...fns) => fns.reduce((f, g) => a => f(g(a)));
 
+const join = str => xs => xs.join(str);
+
 const promiseToTask = p =>
   new Task(async (reject, resolve) => {
     try {
@@ -16,6 +18,7 @@ const trim = contents => `${contents.trim()}\n`;
 
 module.exports = {
   compose,
+  join,
   promiseToTask,
   trim
 };

@@ -11,7 +11,7 @@ const exists = fs => (path, result) =>
   new Task(async (rej, resolve) => {
     try {
       const outcome = await fs.pathExists(path);
-      if (outcome) return rej('Error given path already exists');
+      if (outcome) return rej(`Error given project path: "${path}" already exists`);
       return resolve(result);
     } catch (e) {
       return rej(e);
