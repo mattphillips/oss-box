@@ -1,6 +1,9 @@
 const inquirer = require('inquirer');
 
-const generator = require('./generator');
+const generate = require('./generate');
+const { compose, promiseToTask } = require('./utils');
+
+const buildTemplates = require('./templates');
 
 const nonEmpty = input => input !== '';
 
@@ -32,4 +35,6 @@ const questions = [
   }
 ];
 
-inquirer.prompt(questions).then(generator);
+promiseToTask(() => inquirer.prompt(questions))
+  .chain(config => compose(generate(`./${config.name}`), buildTemplates)(config))
+  .fork(console.error, msgs => console.log(msgs.join('\n'))); // eslint-disable-line
