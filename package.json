@@ -4,6 +4,8 @@
   "description": "Open source project boilerplate generator",
   "main": "src/index.js",
   "scripts": {
+    "contributor": "all-contributors add",
+    "contributor:gen": "all-contributors generate",
     "lint": "eslint src",
     "lint:fix": "yarn lint -- --fix",
     "precommit": "lint-staged",
@@ -29,6 +31,7 @@
   },
   "homepage": "https://github.com/mattphillips/oss-box#readme",
   "devDependencies": {
+    "all-contributors-cli": "^4.5.0",
     "babel-eslint": "^8.0.1",
     "eslint": "^4.9.0",
     "eslint-plugin-import": "^2.7.0",

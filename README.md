@@ -1,6 +1,8 @@
 <div align="center">
 <h1>oss-box</h1>
+
 📦
+
 Open source project boilerplate generator
 </div>
 
@@ -38,7 +40,8 @@ yarn add -D oss-box
 ## Contributors
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-| :---: | :---: | :---: |
+| [<img src="https://avatars0.githubusercontent.com/u/5610087?v=4" width="100px;"/><br /><sub>Matt Phillips</sub>](http://mattphillips.io)<br />[💻](https://github.com/mattphillips/oss-box/commits?author=mattphillips "Code") [📖](https://github.com/mattphillips/oss-box/commits?author=mattphillips "Documentation") [🚇](#infra-mattphillips "Infrastructure (Hosting, Build-Tools, etc)") |
+| :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ## LICENSE
