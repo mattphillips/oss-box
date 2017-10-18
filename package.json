@@ -1,7 +1,7 @@
 {
   "name": "oss-box",
   "version": "0.0.1",
-  "description": "open source project boilerplate generator",
+  "description": "Open source project boilerplate generator",
   "main": "src/index.js",
   "scripts": {
     "lint": "eslint src",
