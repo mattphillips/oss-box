@@ -4,11 +4,9 @@ const inquirer = require('inquirer');
 
 const generate = require('./generate');
 const fsTask = require('./fsTask');
-const { compose, join, promiseToTask } = require('./utils');
+const { compose, join, nonEmpty, promiseToTask } = require('./utils');
 
 const buildTemplates = require('./templates');
-
-const nonEmpty = input => input !== '';
 
 const questions = [
   {
@@ -34,6 +32,12 @@ const questions = [
     type: 'input',
     name: 'owner',
     message: 'Github username?',
+    validate: nonEmpty
+  },
+  {
+    type: 'input',
+    name: 'year',
+    message: 'License start year?',
     validate: nonEmpty
   }
 ];

@@ -1,6 +1,6 @@
 module.exports = ({ description, name, owner }) => `
 <div align="center">
-<h1>$${name}</h1>
+<h1>${name}</h1>
 
 ${description}
 </div>
@@ -24,12 +24,12 @@ ${description}
 
 With npm:
 \`\`\`sh
-npm install --save-dev $${name}
+npm install --save-dev ${name}
 \`\`\`
 
 With yarn:
 \`\`\`sh
-yarn add -D $${name}
+yarn add -D ${name}
 \`\`\`
 
 ## Setup
@@ -39,7 +39,6 @@ yarn add -D $${name}
 ## Contributors
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-| :---: | :---: | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ## LICENSE

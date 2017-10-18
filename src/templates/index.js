@@ -2,18 +2,18 @@ const path = require('path');
 
 const allContributors = require('./all-contributors');
 const license = require('./license');
-const package = require('./package');
+const packageJson = require('./package');
 const readme = require('./readme');
 
 module.exports = config => [
   {
     contents: allContributors(config),
-    file: 'all-contributors.json',
-    message: 'Created: all-contributors.json',
+    file: '.all-contributorsrc',
+    message: 'Created: all-contributorsrc',
     type: 'output'
   },
   {
-    contents: package(config),
+    contents: packageJson(config),
     file: 'package.json',
     message: 'Created: package.json',
     type: 'output'
