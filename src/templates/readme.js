@@ -14,8 +14,7 @@ ${description}
 [![MIT License](https://img.shields.io/npm/l/${name}.svg?style=flat-square)](https://github.com/${owner}/${name}/blob/master/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![Roadmap](https://img.shields.io/badge/%F0%9F%93%94-roadmap-CD9523.svg?style=flat-square)](https://github.com/${owner}/${name}/blob/master/docs/ROADMAP.md)
-[![Examples](https://img.shields.io/badge/%F0%9F%92%A1-examples-ff615b.svg?style=flat-square)](https://github.com/${owner}/${name}/tree/master/examples)
-
+[![Examples](https://img.shields.io/badge/%F0%9F%92%A1-examples-ff615b.svg?style=flat-square)](https://github.com/${owner}/${name}/block/master/docs/EXAMPLES.md)
 ## Problem
 
 ## Solution
