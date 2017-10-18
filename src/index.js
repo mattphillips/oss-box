@@ -2,7 +2,7 @@ const fs = require('fs-extra');
 const inquirer = require('inquirer');
 
 const generate = require('./generate');
-const fileSystem = require('./fsTask');
+const fsTask = require('./fsTask');
 const { compose, promiseToTask } = require('./utils');
 
 const buildTemplates = require('./templates');
@@ -37,6 +37,9 @@ const questions = [
   }
 ];
 
+const fileSystem = fsTask(fs);
+
 promiseToTask(() => inquirer.prompt(questions))
-  .chain(config => compose(generate(fileSystem(fs))(`./${config.name}`), buildTemplates)(config))
+  .chain(config => fileSystem.exists(`./${config.name}`, config))
+  .chain(config => compose(generate(fileSystem)(`./${config.name}`), buildTemplates)(config))
   .fork(console.error, msgs => console.log(msgs.join('\n'))); // eslint-disable-line
