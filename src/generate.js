@@ -1,16 +1,14 @@
-const fs = require('fs-extra');
+const { trim } = require('./utils');
 
-const { promiseToTask, trim } = require('./utils');
+module.exports = ({ copy, write }) => path => files =>
+  files.reduce(
+    (program, { contents, file, from, message, type, to }) => {
+      const c = messages => copy(from, `${path}/${to}`, messages.concat(message));
+      const w = messages => write(`${path}/${file}`, trim(contents), messages.concat(message));
 
-const concat = (a, b) => () => a.concat(b);
+      if (type === 'copy') return program.chain(c);
 
-const copy = (from, to, msg) => msgs => promiseToTask(() => fs.copy(from, to).then(concat(msgs, msg)));
-
-const write = (filename, contents, msg) => msgs =>
-  promiseToTask(() => fs.outputFile(filename, contents).then(concat(msgs, msg)));
-
-const fileToTask = (path, { contents, file, from, message, type, to }) =>
-  type == 'copy' ? copy(from, `${path}/${to}`, message) : write(`${path}/${file}`, trim(contents), message);
-
-module.exports = path => files =>
-  files.reduce((program, file) => program.chain(fileToTask(path, file)), { chain: t => t([]) });
+      return program.chain(w);
+    },
+    { chain: t => t([]) }
+  );
