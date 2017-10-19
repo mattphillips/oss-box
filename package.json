@@ -12,6 +12,8 @@
     "prettier": "prettier 'src/**/*.js' --write --single-quote=true --print-width=120",
     "start": "node src",
     "test": "jest",
+    "test:coverage": "yarn test -- --coverage",
+    "test:report": "codecov",
     "test:watch": "jest --watch"
   },
   "keywords": [
@@ -37,6 +39,7 @@
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.1",
     "babel-jest-assertions": "^0.0.2",
+    "codecov": "^2.3.1",
     "eslint": "^4.9.0",
     "eslint-plugin-import": "^2.7.0",
     "husky": "^0.14.3",
