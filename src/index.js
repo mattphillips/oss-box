@@ -13,7 +13,8 @@ const questions = [
     type: 'input',
     name: 'name',
     message: 'Project name?',
-    validate: nonEmpty
+    validate: nonEmpty,
+    default: process.argv[2]
   },
   {
     type: 'input',
