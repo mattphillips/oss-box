@@ -39,6 +39,7 @@
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.1",
     "babel-jest-assertions": "^0.0.2",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
     "codecov": "^2.3.1",
     "eslint": "^4.9.0",
     "eslint-plugin-import": "^2.7.0",
@@ -58,6 +59,7 @@
     "env": {
       "test": {
         "plugins": [
+          "transform-async-to-generator",
           "babel-jest-assertions"
         ]
       }
