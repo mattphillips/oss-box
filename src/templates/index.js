@@ -1,6 +1,7 @@
 const path = require('path');
 
 const allContributors = require('./all-contributors');
+const gitIgnore = require('./gitIgnore');
 const license = require('./license');
 const packageJson = require('./package');
 const readme = require('./readme');
@@ -31,11 +32,16 @@ module.exports = config => [
     type: 'output'
   },
   {
+    contents: gitIgnore(config),
+    file: '.gitignore',
+    message: 'Created: .gitignore',
+    type: 'output'
+  },
+  {
     from: path.join(__dirname, './static'),
     to: '',
     message:
-      'Created: .gitignore' +
-      '\nCreated: .travis' +
+      'Created: .travis' +
       '\nCreated: CONTRIBUTING.md' +
       '\nCreated: EXAMPLES.md' +
       '\nCreated: ROADMAP.md' +
