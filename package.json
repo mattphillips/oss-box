@@ -3,6 +3,11 @@
   "version": "0.0.1",
   "description": "Open source project boilerplate generator",
   "main": "src/index.js",
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "contributor": "all-contributors add",
     "contributor:gen": "all-contributors generate",
