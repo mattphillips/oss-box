@@ -6,15 +6,12 @@ const join = separator => xs => xs.join(separator);
 
 const nonEmpty = str => str !== '';
 
-const promiseToTask = p =>
-  new Task(async (reject, resolve) => {
-    try {
-      const result = await p();
-      return resolve(result);
-    } catch (err) {
-      return reject(err);
-    }
-  });
+const promiseToTask = promise =>
+  new Task((reject, resolve) =>
+    promise()
+      .then(resolve)
+      .catch(reject)
+  );
 
 const trim = str => `${str.trim()}\n`;
 
