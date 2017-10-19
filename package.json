@@ -11,7 +11,8 @@
     "precommit": "lint-staged",
     "prettier": "prettier 'src/**/*.js' --write --single-quote=true --print-width=120",
     "start": "node src",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "keywords": [
     "oss",
@@ -33,7 +34,9 @@
   "homepage": "https://github.com/mattphillips/oss-box#readme",
   "devDependencies": {
     "all-contributors-cli": "^4.5.0",
+    "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.1",
+    "babel-jest-assertions": "^0.0.2",
     "eslint": "^4.9.0",
     "eslint-plugin-import": "^2.7.0",
     "husky": "^0.14.3",
@@ -47,6 +50,15 @@
       "yarn prettier",
       "git add"
     ]
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "plugins": [
+          "babel-jest-assertions"
+        ]
+      }
+    }
   },
   "dependencies": {
     "chalk": "^2.1.0",

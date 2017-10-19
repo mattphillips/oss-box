@@ -295,6 +295,12 @@ babel-helpers@^6.24.1:
     babel-runtime "^6.22.0"
     babel-template "^6.24.1"
 
+babel-jest-assertions@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/babel-jest-assertions/-/babel-jest-assertions-0.0.2.tgz#4dd28cbab7523f8b25df5ee2a62266e9532786a3"
+  dependencies:
+    babel-generator "^6.26.0"
+
 babel-jest@^21.2.0:
   version "21.2.0"
   resolved "https://registry.yarnpkg.com/babel-jest/-/babel-jest-21.2.0.tgz#2ce059519a9374a2c46f2455b6fbef5ad75d863e"
