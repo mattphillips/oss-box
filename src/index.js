@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const { green, red } = require('chalk');
 const fs = require('fs-extra');
 const inquirer = require('inquirer');
