@@ -19,23 +19,64 @@ Open source project boilerplate generator
 
 ## Problem
 
+Starting a new open source project is a pain to setup all of the boilerplate
+
 ## Solution
+
+Automate as much of the boilerplate as possible 😎. `oss-box` is an interactive generator of new open source
+JavaScript projects.
 
 ## Installation
 
 With npm:
 ```sh
-npm install --save-dev oss-box
+npm install -g oss-box
 ```
 
 With yarn:
 ```sh
-yarn add -D oss-box
+yarn global add oss-box
 ```
 
-## Setup
-
 ## Usage
+
+Run the following and answer the prompts
+```bash
+oss-box my-cool-project
+```
+
+Will generate the following project:
+
+```
+my-cool-project
+├── .all-contributorsrc
+├── .github
+│   ├── ISSUE_TEMPLATE.md
+│   └── PULL_REQUEST_TEMPLATE.md
+├── .gitignore
+├── .travis.yml
+├── CONTRIBUTING.md
+├── LICENSE
+├── README.md
+├── docs
+│   ├── EXAMPLES.md
+│   └── ROADMAP.md
+└── package.json
+```
+
+## Defaults
+
+This generator has the following defaults:
+
+ - CI: [Travis](https://travis-ci.org/) is the default continuous integration provider
+ - Code coverage: [Codecov](https://codecov.io/) is the default code coverage provider
+ - License: [MIT](https://opensource.org/licenses/MIT)
+ - Contributors: [all-contributors](https://github.com/kentcdodds/all-contributors) specification is configured to
+ acknowledge contributors to the project from everyone
+
+## Other solutions
+
+This package is inspired by [@kentcdodds](https://github.com/kentcdodds)'s [generator-kcd-oss](https://github.com/kentcdodds/generator-kcd-oss) project
 
 ## Contributors
 
