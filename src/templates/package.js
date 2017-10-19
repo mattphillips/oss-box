@@ -16,6 +16,6 @@ module.exports = ({ author, description, name, owner }) => `
   "bugs": {
     "url": "https://github.com/${owner}/${name}/issues"
   },
-  "homepage": "https://github.com/${owner}/${name}#readme",
+  "homepage": "https://github.com/${owner}/${name}#readme"
 }
 `;
